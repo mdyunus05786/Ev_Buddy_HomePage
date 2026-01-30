@@ -46,17 +46,17 @@ function NewsPdfCard({ item, onOpen }) {
 const SLIDES = [
   {
     id: 'hero-1',
-    imageUrl: '/images/HomePage_img1.jpg',
+    imageUrl: `${import.meta.env.BASE_URL}images/HomePage_img1.jpg`,
     alt: 'EV dashboard background',
   },
   {
     id: 'hero-2',
-    imageUrl: '/images/hero-2.svg',
+    imageUrl: `${import.meta.env.BASE_URL}images/hero-2.svg`,
     alt: 'EV charging background',
   },
   {
     id: 'hero-3',
-    imageUrl: '/images/hero-3.svg',
+    imageUrl: `${import.meta.env.BASE_URL}images/hero-3.svg`,
     alt: 'EV infrastructure background',
   },
 ]
@@ -245,7 +245,7 @@ function App() {
       <header className="topbar">
         <div className="topbarInner">
           <div className="brand">
-            <img className="brandLogo" src="/images/Evbuddy_logo.png" alt="EV Buddy" />
+            <img className="brandLogo" src={`${import.meta.env.BASE_URL}images/Evbuddy_logo.png`} alt="EV Buddy" />
           </div>
 
           <nav className="nav" aria-label="Primary">
@@ -698,7 +698,7 @@ function App() {
               <div className="clusterImageCard">
                 <img
                   className="clusterImage"
-                  src="/images/Ev_buddy_cluster.png"
+                  src={`${import.meta.env.BASE_URL}images/Ev_buddy_cluster.png`}
                   alt="EV Buddy Cluster"
                   loading="lazy"
                 />
