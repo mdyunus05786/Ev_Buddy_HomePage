@@ -2,6 +2,12 @@
 
 React (Vite) app lives in `evbuddy-react/`.
 
+## 🔗 Access the Page
+
+- **Live Site (GitHub Pages)**: [https://mdyunus05786.github.io/Ev_Buddy_HomePage/](https://mdyunus05786.github.io/Ev_Buddy_HomePage/)
+- **Local Development**: `http://localhost:5173/` (after running dev server)
+- **Repository**: [https://github.com/mdyunus05786/Ev_Buddy_HomePage](https://github.com/mdyunus05786/Ev_Buddy_HomePage)
+
 ## Run (recommended)
 
 From this folder:
