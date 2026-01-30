@@ -10,4 +10,5 @@ export default defineConfig({
       },
     }),
   ],
+  base: '/Ev_Buddy_HomePage/',
 })

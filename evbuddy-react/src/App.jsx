@@ -4,6 +4,9 @@ import { useEffect, useMemo, useRef, useState } from 'react'
 import { Document, Page, pdfjs } from 'react-pdf'
 import pdfWorker from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
 
+const BASE_URL = import.meta.env.BASE_URL ?? '/'
+const resolvePublic = (path) => `${BASE_URL}${path}`
+
 pdfjs.GlobalWorkerOptions.workerSrc = pdfWorker
 
 function NewsPdfCard({ item, onOpen }) {
@@ -46,17 +49,17 @@ function NewsPdfCard({ item, onOpen }) {
 const SLIDES = [
   {
     id: 'hero-1',
-    imageUrl: '/images/HomePage_img1.jpg',
+    imageUrl: resolvePublic('images/HomePage_img1.jpg'),
     alt: 'EV dashboard background',
   },
   {
     id: 'hero-2',
-    imageUrl: '/images/hero-2.svg',
+    imageUrl: resolvePublic('images/hero-2.svg'),
     alt: 'EV charging background',
   },
   {
     id: 'hero-3',
-    imageUrl: '/images/hero-3.svg',
+    imageUrl: resolvePublic('images/hero-3.svg'),
     alt: 'EV infrastructure background',
   },
 ]
@@ -245,7 +248,7 @@ function App() {
       <header className="topbar">
         <div className="topbarInner">
           <div className="brand">
-            <img className="brandLogo" src="/images/Evbuddy_logo.png" alt="EV Buddy" />
+            <img className="brandLogo" src={resolvePublic('images/Evbuddy_logo.png')} alt="EV Buddy" />
           </div>
 
           <nav className="nav" aria-label="Primary">
@@ -698,7 +701,7 @@ function App() {
               <div className="clusterImageCard">
                 <img
                   className="clusterImage"
-                  src="/images/Ev_buddy_cluster.png"
+                  src={resolvePublic('images/Ev_buddy_cluster.png')}
                   alt="EV Buddy Cluster"
                   loading="lazy"
                 />
