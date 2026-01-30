@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1a22"/>
+      <stop offset="0.55" stop-color="#0a0f1a"/>
+      <stop offset="1" stop-color="#090a10"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="40%" cy="45%" r="70%">
+      <stop offset="0" stop-color="#00e5c2" stop-opacity="0.45"/>
+      <stop offset="0.55" stop-color="#00e5c2" stop-opacity="0.0"/>
+    </radialGradient>
+    <filter id="blur" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="35"/>
+    </filter>
+  </defs>
+
+  <rect width="1920" height="1080" fill="url(#bg)"/>
+  <circle cx="550" cy="430" r="360" fill="url(#glow)" filter="url(#blur)"/>
+  <circle cx="1520" cy="330" r="360" fill="#0ea5e9" opacity="0.18" filter="url(#blur)"/>
+
+  <!-- faux dashboard frame -->
+  <g opacity="0.95">
+    <rect x="250" y="140" width="1420" height="800" rx="30" fill="#111827" opacity="0.25"/>
+    <rect x="290" y="185" width="1340" height="720" rx="26" fill="#0b1220" opacity="0.65" stroke="#334155" opacity="0.8"/>
+    <rect x="310" y="215" width="1300" height="66" rx="18" fill="#0f172a" opacity="0.88"/>
+
+    <!-- faux car -->
+    <path d="M1320 430c90 0 170 36 212 92 14 18 8 44-14 52-54 20-116 32-186 32-90 0-170-18-230-48-26-13-28-49-4-66 56-39 132-62 222-62z" fill="#e2e8f0" opacity="0.18"/>
+    <circle cx="1398" cy="546" r="32" fill="#e2e8f0" opacity="0.22"/>
+    <circle cx="1548" cy="546" r="32" fill="#e2e8f0" opacity="0.22"/>
+
+    <!-- faux big numbers -->
+    <text x="470" y="470" fill="#e5e7eb" font-family="Segoe UI, Arial" font-size="170" font-weight="700" opacity="0.22">55</text>
+    <text x="720" y="470" fill="#e5e7eb" font-family="Segoe UI, Arial" font-size="54" font-weight="600" opacity="0.22">mi</text>
+    <text x="860" y="470" fill="#e5e7eb" font-family="Segoe UI, Arial" font-size="120" font-weight="700" opacity="0.20">26%</text>
+  </g>
+
+  <!-- vignette -->
+  <rect width="1920" height="1080" fill="#000" opacity="0.25"/>
+</svg>

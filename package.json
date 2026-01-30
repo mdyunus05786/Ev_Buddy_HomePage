@@ -1,0 +1,12 @@
+{
+  "name": "evbuddy-homepage",
+  "private": true,
+  "scripts": {
+    "install:app": "npm --prefix evbuddy-react install",
+    "dev": "npm --prefix evbuddy-react run dev --",
+    "dev:host": "npm --prefix evbuddy-react run dev -- --host",
+    "build": "npm --prefix evbuddy-react run build",
+    "preview": "npm --prefix evbuddy-react run preview --",
+    "preview:host": "npm --prefix evbuddy-react run preview -- --host"
+  }
+}
