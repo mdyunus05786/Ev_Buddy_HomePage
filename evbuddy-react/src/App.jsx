@@ -49,17 +49,17 @@ function NewsPdfCard({ item, onOpen }) {
 const SLIDES = [
   {
     id: 'hero-1',
-    imageUrl: resolvePublic('images/HomePage_img1.jpg'),
+    imageUrl: resolvePublic('images/slide1.jpg'),
     alt: 'EV dashboard background',
   },
   {
     id: 'hero-2',
-    imageUrl: resolvePublic('images/hero-2.svg'),
+    imageUrl: resolvePublic('images/slide2.jpg'),
     alt: 'EV charging background',
   },
   {
     id: 'hero-3',
-    imageUrl: resolvePublic('images/hero-3.svg'),
+    imageUrl: resolvePublic('images/slide3.webp'),
     alt: 'EV infrastructure background',
   },
 ]
@@ -684,27 +684,29 @@ function App() {
             charging into a profitable business opportunity.
           </p>
 
-          <div className="clusterGrid" aria-label="EVBuddy Cluster details">
-            <div className="clusterLeft">
-              <div className="clusterKicker">Advanced Features</div>
-              <div className="clusterCards" role="list" aria-label="Advanced features">
-                {CLUSTER_FEATURES.map((f) => (
-                  <div key={f.title} className="clusterCard" role="listitem">
-                    <div className="clusterCardTitle">{f.title}</div>
-                    <div className="clusterCardBody">{f.body}</div>
-                  </div>
-                ))}
+          <div className="clusterFrame">
+            <div className="clusterGrid" aria-label="EVBuddy Cluster details">
+              <div className="clusterLeft">
+                <div className="clusterKicker">Advanced Features</div>
+                <div className="clusterCards" role="list" aria-label="Advanced features">
+                  {CLUSTER_FEATURES.map((f) => (
+                    <div key={f.title} className="clusterCard" role="listitem">
+                      <div className="clusterCardTitle">{f.title}</div>
+                      <div className="clusterCardBody">{f.body}</div>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
 
-            <div className="clusterRight" aria-label="EVBuddy Cluster image">
-              <div className="clusterImageCard">
-                <img
-                  className="clusterImage"
-                  src={resolvePublic('images/Ev_buddy_cluster.png')}
-                  alt="EV Buddy Cluster"
-                  loading="lazy"
-                />
+              <div className="clusterRight" aria-label="EVBuddy Cluster image">
+                <div className="clusterImageCard">
+                  <img
+                    className="clusterImage"
+                    src={resolvePublic('images/Ev_buddy_cluster.png')}
+                    alt="EV Buddy Cluster"
+                    loading="lazy"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -919,6 +921,43 @@ function App() {
           </div>
         </div>
       </section>
+
+      <footer className="siteFooter" aria-label="Site footer">
+        <div className="siteFooterInner">
+          <div className="footerBrand">
+            <img className="footerLogo" src={resolvePublic('images/Evbuddy_logo.png')} alt="EV Buddy" />
+            <p>Powering the future of EV charging. Eliminate range anxiety and create a flexible, mobile ecosystem.</p>
+            <div className="footerSocials" aria-label="Social links">
+              <span className="footerSocial">f</span>
+              <span className="footerSocial">x</span>
+              <span className="footerSocial">▶</span>
+              <span className="footerSocial">in</span>
+            </div>
+          </div>
+
+          <div className="footerColumns">
+            <div>
+              <div className="footerColumnTitle">Products</div>
+              <a href="#services" className="footerLink">EVChargeShare</a>
+              <a href="#services" className="footerLink">Installation</a>
+              <a href="#rent" className="footerLink">Rent a Charger</a>
+            </div>
+            <div>
+              <div className="footerColumnTitle">Company</div>
+              <a href="#investment" className="footerLink">Investment</a>
+              <a href="#news" className="footerLink">Network</a>
+              <a href="#news" className="footerLink">News</a>
+            </div>
+            <div>
+              <div className="footerColumnTitle">Support &amp; Help</div>
+              <a className="footerLink" href="tel:8777723393">877-772-3393</a>
+              <a className="footerLink" href="#privacy">Privacy Policy</a>
+              <a className="footerLink" href="#terms">Terms of Use</a>
+            </div>
+          </div>
+        </div>
+        <div className="footerNote">© {new Date().getFullYear()} EV Buddy Inc. All rights reserved.</div>
+      </footer>
 
       {demoVideoId ? (
         <div className="demoModalBackdrop" role="dialog" aria-modal="true" aria-label="Video player">
