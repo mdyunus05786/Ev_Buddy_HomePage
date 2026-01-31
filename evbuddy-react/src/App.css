@@ -1218,6 +1218,129 @@
   background: rgba(0, 229, 194, 0.95);
 }
 
+.preorder {
+  background: #020510;
+  padding: 92px 0 120px;
+}
+
+.preorderInner {
+  width: min(1240px, calc(100% - 44px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.preorderCard {
+  background: #0f131f;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 32px 28px;
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.55);
+}
+
+.preorderHeader h2 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.preorderHeader p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 8px 0 26px;
+  font-size: 15px;
+}
+
+.preorderGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.preorderGrid label,
+.preorderSubscribe label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.preorderGrid input,
+.preorderSubscribe input {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: rgba(255, 255, 255, 0.92);
+  font-size: 14px;
+}
+
+.preorderGrid input:focus,
+.preorderSubscribe input:focus {
+  outline: none;
+  border-color: rgba(0, 229, 194, 0.5);
+  background: rgba(0, 229, 194, 0.04);
+}
+
+.accountType {
+  grid-column: span 2;
+}
+
+.accountButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.accountBtn {
+  flex: 1;
+  padding: 10px 0;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.accountBtn.active {
+  background: #00e5c2;
+  color: #02121f;
+  border-color: rgba(0, 229, 194, 0.8);
+}
+
+.preorderSubmit,
+.subscribeBtn {
+  margin-top: 24px;
+  width: 100%;
+  padding: 14px 0;
+  border-radius: 10px;
+  border: 0;
+  font-size: 14px;
+  font-weight: 700;
+  background: #00e5c2;
+  color: #02121f;
+  cursor: pointer;
+  box-shadow: 0 18px 30px rgba(0, 229, 194, 0.35);
+}
+
+.preorderSubscribe h3 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.preorderSubscribe p {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+
+.subscribeNote {
+  margin-top: 14px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.55);
+}
+
 .newsNavIcon {
   display: block;
   width: 10px;

@@ -842,6 +842,84 @@ function App() {
         </div>
       </section>
 
+      <section className="preorder" aria-label="Pre-order and newsletter">
+        <div className="preorderInner">
+          <div className="preorderCard preorderForm">
+            <div className="preorderHeader">
+              <h2>Pre-Order Form</h2>
+              <p>Tell us a bit about you and your EV. We'll follow up shortly.</p>
+            </div>
+            <div className="preorderGrid">
+              <label>
+                Full Name *
+                <input type="text" name="fullName" placeholder="Enter your name" />
+              </label>
+              <label>
+                Email Address *
+                <input type="email" name="email" placeholder="Enter your email" />
+              </label>
+              <label>
+                Phone Number *
+                <input type="tel" name="phone" placeholder="(123) 456-7890" />
+              </label>
+              <label className="accountType">
+                Account Type *
+                <div className="accountButtons">
+                  <button type="button" className="accountBtn active">Personal</button>
+                  <button type="button" className="accountBtn">Company</button>
+                </div>
+              </label>
+              <label>
+                Street Address *
+                <input type="text" name="address" placeholder="" />
+              </label>
+              <label>
+                City *
+                <input type="text" name="city" placeholder="" />
+              </label>
+              <label>
+                State *
+                <input type="text" name="state" placeholder="Select State" />
+              </label>
+              <label>
+                ZIP Code *
+                <input type="text" name="zip" placeholder="" />
+              </label>
+              <label>
+                EV Type *
+                <input type="text" name="evType" placeholder="Rivian, Ford, etc." />
+              </label>
+              <label>
+                Comment (Optional)
+                <input type="text" name="comment" placeholder="Enter your message" />
+              </label>
+            </div>
+            <button type="button" className="preorderSubmit">
+              Submit Pre-Order
+            </button>
+          </div>
+
+          <div className="preorderCard preorderSubscribe">
+            <div>
+              <h3>Subscribe to receive future updates from EVBUDDY</h3>
+              <p>You will receive important updates, promotions, and many more cool stuffs from us once you subscribe.</p>
+            </div>
+            <label>
+              Name
+              <input type="text" name="subName" placeholder="Enter your name" />
+            </label>
+            <label>
+              Email
+              <input type="email" name="subEmail" placeholder="Enter your email" />
+            </label>
+            <button type="button" className="subscribeBtn">
+              Subscribe
+            </button>
+            <p className="subscribeNote">No spam guaranteed, so please don't send any spam mail.</p>
+          </div>
+        </div>
+      </section>
+
       {demoVideoId ? (
         <div className="demoModalBackdrop" role="dialog" aria-modal="true" aria-label="Video player">
           <button type="button" className="demoModalClose" onClick={() => setDemoVideoId(null)} aria-label="Close video" />
